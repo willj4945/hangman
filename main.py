@@ -6,7 +6,7 @@ ascii_banner = pyfiglet.figlet_format("Hangman")
 print(ascii_banner)
 
 word_list = ["aardvark", "baboon", "camel"]
-players_choice = input("What a letter: ".lower())
+players_choice = input("Choose a letter: ".lower())
 
 random_word = random.choice(word_list)
 
