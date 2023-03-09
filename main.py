@@ -6,15 +6,14 @@ ascii_banner = pyfiglet.figlet_format("Hangman")
 print(ascii_banner)
 
 word_list = ["aardvark", "baboon", "camel"]
+players_choice = input("What a letter: ".lower())
 
-chosen_word = ""
-players_choice = input("What is the random word? ".lower())
+random_word = random.choice(word_list)
 
-for i in range(1):
-    chosen_word = random.choice(word_list)
-    print(chosen_word)
+for letter in random_word:
+    if letter == players_choice:
+        print("Yes")
 
-if players_choice == chosen_word:
-    print("Player wins!")
-else:
-    print("Player losses")
+    else:
+        print("No")
+
